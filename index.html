@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/styles/index/style.css">
+    <title>Simulador de Financiamento</title>
+</head>
+<body>
+    <form>
+       <fieldset>
+        <legend>Simulador de Financiamento com Sistema de Amortização Constante (SAC)</legend>
+        <div class="fieldsWrap">
+            <label for="valorBem">Valor do bem: </label>
+            <input type="text" name="valorBem" id="valorBem" placeholder="Informe o valor do bem">
+        </div>
+
+        <div class="fieldsWrap">
+            <label for="valorEntrada">Valor de Entrada: </label>
+            <input type="text" name="valorEntrada" id="valorEntrada" placeholder="Informe o valor de entrada">
+        </div>
+
+        <div class="fieldsWrap">
+            <label for="taxaJuros">Taxa de Juros: </label>
+            <input type="text" name="taxaJuros" id="taxaJuros" placeholder="Informe a taxa de juros">
+        </div>
+
+        <div class="fieldsWrap">
+            <label for="prazo">Prazo: </label>
+            <input type="text" name="prazo" id="prazo" placeholder="informe o valor do prazo">
+        </div>
+
+        <div class="fieldCarenciaWrap">
+            <input type="checkbox" name="carencia" id="carencia"> 
+            <label for="carencia">Com carência?</label>
+    
+            <select name="carenciaTempo" id="carenciaTempo" hidden >
+                <option value="2">2 Meses</option>
+                <option value="3">3 Meses</option>
+                <option value="4">4 Meses</option>
+            </select>
+        </div>
+
+        <button type="submit">Calcular</button>
+
+       </fieldset>
+    </form>
+
+    <script src="./src/functions/chkCarenciaFunction.js"></script>
+</body>
+</html>
