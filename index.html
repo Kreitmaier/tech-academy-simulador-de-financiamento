@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="./src/styles/index/style.css">
     <title>Simulador de Financiamento</title>
 </head>
+
 <body>
-    <form>
-       <fieldset>
+    <fieldset>
         <legend>Simulador de Financiamento com Sistema de Amortização Constante (SAC)</legend>
         <div class="fieldsWrap">
             <label for="valorBem">Valor do bem: </label>
@@ -32,21 +32,37 @@
         </div>
 
         <div class="fieldCarenciaWrap">
-            <input type="checkbox" name="carencia" id="carencia"> 
+            <input type="checkbox" name="carencia" id="carencia">
             <label for="carencia">Com carência?</label>
-    
-            <select name="carenciaTempo" id="carenciaTempo" hidden >
+
+            <select name="carenciaTempo" id="carenciaTempo" hidden>
                 <option value="2">2 Meses</option>
                 <option value="3">3 Meses</option>
                 <option value="4">4 Meses</option>
             </select>
         </div>
 
-        <button type="submit">Calcular</button>
+        <button id="botaoCalcular">Calcular</button>
 
-       </fieldset>
-    </form>
+    </fieldset>
 
-    <script src="./src/functions/chkCarenciaFunction.js"></script>
+    <table>
+        <thead>
+            <tr>
+                <th>Nr</th>
+                <th>Valor da Parcela</th>
+                <th>Amortização</th>
+                <th>Juros</th>
+                <th>Saldo devedor</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody">
+
+        </tbody>
+    </table>
+    <script type="module" src="./src/functions/chkCarenciaFunction.js"></script>
+    <script type="module" src="./src/functions/tableFillFunction.js"></script>
+    <script type="module" src="./src/functions/calcularFunction.js"></script>
 </body>
+
 </html>

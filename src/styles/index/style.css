@@ -101,3 +101,15 @@ button:hover {
     cursor: pointer;
     transition: 0.3s;
 }
+
+table, th, td {
+    margin: 4rem auto;
+    font-size: 1.6rem;
+    border: 1px solid #555555;
+    border-collapse: collapse;
+    padding: 1.5rem;
+}
+
+tr:nth-child(even) {
+    background-color: #ccc;
+}
